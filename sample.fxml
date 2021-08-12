@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ComboBox fx:id="comboBoxMain" layoutX="216.0" layoutY="23.0" onAction="#comboBoxMainAction" prefHeight="24.0" prefWidth="262.0" />
+      <Label layoutX="28.0" layoutY="21.0" text="Build Your Bang">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfPersonalizeLeft" layoutX="28.0" layoutY="266.0" onAction="#tfPersonalizeLeftAction" onMouseClicked="#onActionMouseClicked" prefHeight="24.0" prefWidth="210.0" promptText="Left ear character limit 35" />
+      <TextField fx:id="tfPersonalizeRight" layoutX="262.0" layoutY="266.0" onAction="#tfPersonalizeRightAction" onMouseClicked="#onActionMouseClicked" prefHeight="24.0" prefWidth="210.0" promptText="Right ear character limit 35" />
+      <Label layoutX="28.0" layoutY="242.0" text="Personalize">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Slider fx:id="sliderMain" accessibleRole="INCREMENT_BUTTON" layoutX="41.0" layoutY="95.0" majorTickUnit="50.0" minorTickCount="0" onMouseClicked="#sliderAction" orientation="VERTICAL" prefHeight="76.0" prefWidth="16.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Label layoutX="30.0" layoutY="68.0" text="Volume Boost">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <RadioButton fx:id="rBtnOneGroupTwo" layoutX="143.0" layoutY="205.0" mnemonicParsing="false" onAction="#rBtnGroupTwoAction" text="Matte">
+         <toggleGroup>
+            <ToggleGroup fx:id="rBtnGroupTwo" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rBtnTwoGroupTwo" layoutX="260.0" layoutY="205.0" mnemonicParsing="false" onAction="#rBtnGroupTwoAction" text="Shine" toggleGroup="$rBtnGroupTwo" />
+      <RadioButton fx:id="rBtnThreeGroupTwo" layoutX="375.0" layoutY="205.0" mnemonicParsing="false" onAction="#rBtnGroupTwoAction" prefHeight="18.0" prefWidth="105.0" text="Metal Multi" toggleGroup="$rBtnGroupTwo" />
+      <RadioButton fx:id="rBtnOneGroupOne" layoutX="173.0" layoutY="99.0" mnemonicParsing="false" onAction="#rBtnGroupOneAction" text="White">
+         <toggleGroup>
+            <ToggleGroup fx:id="rBtnGroupOne" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rBtnTwoGroupOne" layoutX="173.0" layoutY="127.0" mnemonicParsing="false" onAction="#rBtnGroupOneAction" text="Black" toggleGroup="$rBtnGroupOne" />
+      <RadioButton fx:id="rBtnThreeGroupOne" layoutX="173.0" layoutY="156.0" mnemonicParsing="false" onAction="#rBtnGroupOneAction" text="Copper" toggleGroup="$rBtnGroupOne" />
+      <CheckBox fx:id="chkBoxOne" layoutX="30.0" layoutY="339.0" mnemonicParsing="false" onAction="#chkBoxOneAction" text="Planar Magnetic" />
+      <CheckBox fx:id="chkBoxTwo" layoutX="30.0" layoutY="366.0" mnemonicParsing="false" onAction="#chkBoxTwoAction" text="Microphone" />
+      <CheckBox fx:id="chkBoxThree" layoutX="30.0" layoutY="391.0" mnemonicParsing="false" onAction="#chkBoxThreeAction" text="Case" />
+      <Label layoutX="30.0" layoutY="314.0" text="Add Ons">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextArea fx:id="taSummary" editable="false" layoutX="199.0" layoutY="314.0" prefHeight="93.0" prefWidth="276.0" promptText="Bang Purchase Summary" />
+      <Button fx:id="btnMake" layoutX="27.0" layoutY="416.0" mnemonicParsing="false" onAction="#btnMakeAction" onMouseEntered="#onActionMouseEntered2" onMouseExited="#onActionMouseExited2" prefHeight="24.0" prefWidth="135.0" text="Make" />
+      <Button fx:id="btnSave" alignment="TOP_CENTER" layoutX="334.0" layoutY="447.0" mnemonicParsing="false" onAction="#btnSaveAction" onMouseEntered="#onActionMouseEntered" onMouseExited="#onActionMouseExited" prefHeight="24.0" prefWidth="143.0" text="Save For Later" textAlignment="RIGHT" textOverrun="CLIP" />
+      <Label layoutX="170.0" layoutY="71.0" text="Color">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="30.0" layoutY="205.0" text="Finish">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label fx:id="lblPrice" layoutX="273.0" layoutY="65.0" prefHeight="121.0" prefWidth="221.0" text="Price" textFill="#8468bc" wrapText="true">
+         <font>
+            <Font name="Open Sans" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfName" layoutX="199.0" layoutY="416.0" prefHeight="24.0" prefWidth="129.0" promptText="Name" />
+      <TextField fx:id="tfEmail" layoutX="334.0" layoutY="416.0" prefHeight="24.0" prefWidth="143.0" promptText="Email" />
+   </children>
+</AnchorPane>
